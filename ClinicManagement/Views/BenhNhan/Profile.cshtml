@@ -1,0 +1,27 @@
+﻿@model ClinicManagement.Models.BenhNhan
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Views/Shared/_LayoutNormal.cshtml";
+}
+
+<h2 class="text-primary text-center">THÔNG TIN CÁ NHÂN</h2>
+<div class="list-group">
+    <div class="list-group-item">
+        <div class="row">
+            <div class="col-md-6">
+                <strong>Họ:</strong> @Model.Ho<br />
+                <strong>Tên:</strong> @Model.Ten<br />
+                <strong>Ngày sinh:</strong> @Model.NgaySinh<br />
+                <strong>Căn cước công dân:</strong> @Model.SoCccd<br />
+                <strong>Giới tính:</strong> @Model.GioiTinh<br />
+                <strong>Địa chỉ:</strong> @Model.DiaChi<br />
+                <strong>Số điện thoại:</strong> @Model.SoDienThoai<br />
+            </div>
+            <div class="col-md-6">
+                <a asp-controller="BenhNhan" asp-action="CreateProfile" class="btn btn-warning">Thêm</a>
+                <a asp-controller="BenhNhan" asp-action="EditProfile" class="btn btn-primary">Chỉnh sửa</a>
+            </div>
+        </div>
+    </div>
+</div>
+

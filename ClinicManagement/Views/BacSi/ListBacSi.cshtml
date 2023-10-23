@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "ListBacSi";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<body>
+    <div class="container mt-3">
+        <h2 class="text-primary text-center">DANH SÁCH BÁC SĨ</h2>
+        <form asp-controller="BacSi" asp-action="ListBacSi" method="get" class="d-flex">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control me-2" name="searchTerm" placeholder="Nhập tên bác sĩ">
+                <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+            </div>
+        </form>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Họ</th>
+                    <th>Tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Chức vụ</th>
+                    <th>Giới tính</th>
+                    <th>Địa chỉ</th>
+                    <th>Số điện thoại</th>
+                    <th>Bằng cấp</th>
+                    <th>Chuyên môn</th>
+                    <th>
+                        <a type="button" class="btn btn-primary float-end" asp-controller="BacSi" asp-action="CreateBacSi">Thêm</a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var BacSi in Model)
+                {
+                    <tr>
+                        <td>@BacSi.MaBacSi</td>
+                        <td>@BacSi.Ho</td>
+                        <td>@BacSi.Ten</td>
+                        <td>@BacSi.NgaySinh.ToShortDateString()</td>
+                        <td>@BacSi.ChucVu</td>
+                        <td>@BacSi.GioiTinh</td>
+                        <td>@BacSi.DiaChi</td>
+                        <td>@BacSi.SoDienThoai</td>
+                        <td>@BacSi.BangCap</td>
+                        <td>@BacSi.ChuyenMon</td>
+                        <td>
+                            <a asp-controller="BacSi" asp-action="EditBacSi" asp-route-id="@BacSi.MaBacSi" class="btn btn-warning">Sửa</a>
+                        </td>
+                        <td>
+                            <a asp-controller="BacSi" asp-action="DeleteBacSi" asp-route-id="@BacSi.MaBacSi" class="btn btn-danger">Xóa</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+

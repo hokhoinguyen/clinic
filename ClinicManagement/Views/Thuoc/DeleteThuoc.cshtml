@@ -1,0 +1,28 @@
+﻿@model ClinicManagement.Models.Thuoc
+
+@{
+    ViewData["Title"] = "DeleteThuoc";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 class="text-danger text-center">XÓA THUỐC</h2>
+<div class="container mt-3">
+    <h4>Bạn có chắc chắn muốn xóa thuốc "@Model.TenThuoc" không?</h4>
+    <div>
+        <h5>Thông tin thuốc:</h5>
+        <ul>
+            <li><strong>Mã thuốc:</strong> @Model.MaThuoc</li>
+            <li><strong>Tên thuốc:</strong> @Model.TenThuoc</li>
+            <li><strong>Mô tả:</strong> @Model.MoTa</li>
+            <li><strong>Hãng sản xuất:</strong> @Model.HangSanXuat</li>
+            <li><strong>Giá niêm yết:</strong> @Model.GiaNiemYet</li>
+        </ul>
+    </div>
+    <form asp-action="PostDeleteThuoc" asp-route-id="@Model.MaThuoc" method="post">
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-danger">Xóa</button>
+        <a asp-action="ListThuoc" class="btn btn-secondary">Hủy bỏ</a>
+    </form>
+</div>
+
+

@@ -1,0 +1,29 @@
+﻿@model ClinicManagement.Models.YTa
+@{
+    ViewData["Title"] = "DeleteYTa";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 class="text-danger text-center">XÓA Y TÁ</h2>
+<div class="container mt-3">
+    <h4>Bạn có chắc chắn muốn xóa y tá "@Model.Ho @Model.Ten" không?</h4>
+    <div>
+        <h5>Thông tin y tá:</h5>
+        <ul>
+            <li><strong>Họ:</strong> @Model.Ho</li>
+            <li><strong>Tên:</strong> @Model.Ten</li>
+            <li><strong>Ngày sinh:</strong> @Model.NgaySinh</li>
+            <li><strong>Giới tính:</strong> @Model.GioiTinh</li>
+            <li><strong>Địa chỉ:</strong> @Model.DiaChi</li>
+            <li><strong>Số điện thoại:</strong> @Model.SoDienThoai</li>
+            <li><strong>Bằng cấp:</strong> @Model.BangCap</li>
+            <li><strong>Chuyên môn:</strong> @Model.ChuyenMon</li>
+        </ul>
+    </div>
+    <form asp-action="PostDeleteYTa" asp-route-id="@Model.MaYta" method="post">
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-danger">Xóa</button>
+        <a asp-action="ListYTa" class="btn btn-secondary">Hủy bỏ</a>
+    </form>
+</div>
+

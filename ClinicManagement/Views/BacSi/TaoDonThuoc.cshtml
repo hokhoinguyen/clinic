@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "TaoDonThuoc";
+    Layout = "~/Views/Shared/_LayoutBacSi.cshtml";
+}
+
+<h2 class="text-primary text-center">TẠO ĐƠN THUỐC</h2>
+
+<form asp-action="TaoDonThuoc" method="post">
+    <div class="mb-3">
+        <label for="NgayKeDon" class="form-label fw-bold">Ngày sinh:</label>
+        <input id="NgayKeDon" name="NgayKeDon" value="@DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")" readonly class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label for="TrieuChung" class="form-label fw-bold">Triệu chứng:</label>
+        <input type="text" class="form-control" id="TrieuChung" name="TrieuChung" placeholder="Nhập triệu chứng">
+    </div>
+    <div class="mb-3">
+        <label for="KetLuan" class="form-label fw-bold">Kết luận:</label>
+        <input type="text" class="form-control" id="KetLuan" name="KetLuan" placeholder="Nhập kết luận" required>
+    </div>
+    <div class="mb-3">
+        <label for="MaLichHen" class="form-label fw-bold">Ngày giờ hẹn:</label>
+        <select class="form-control" id="MaLichHen" name="MaLichHen">
+            <option value="">Chọn lịch hẹn</option>
+            @foreach (var item in ViewBag.DSNgayGioHen)
+            {
+                <option value="@item.Value">@item.Text</option>
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="MaThuoc" class="form-label fw-bold">Tên thuốc:</label>
+        <select class="form-control" id="MaThuoc" name="MaThuoc">
+            <option value="">Chọn tên thuốc</option>
+            @foreach (var item in ViewBag.DSThuoc)
+            {
+                <option value="@item.Text">@item.Text</option>
+            }
+        </select>
+    </div>
+    <td>
+        <button type="submit" class="btn btn-primary">Tạo đơn</button>
+    </td>
+
+</form>
+

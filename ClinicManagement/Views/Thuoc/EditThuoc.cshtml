@@ -1,0 +1,41 @@
+﻿@model ClinicManagement.Models.Thuoc
+@{
+    ViewData["Title"] = "EditThuoc";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 class="text-primary text-center">CHỈNH SỬA THÔNG TIN THUỐC</h2>
+
+<form asp-action="EditThuoc" method="post">
+    <input type="hidden" asp-for="MaThuoc" />
+
+    <div class="mb-3 mt-3">
+        <label asp-for="TenThuoc" class="form-label fw-bold">Tên thuốc:</label>
+        <input asp-for="TenThuoc" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label asp-for="MoTa" class="form-label fw-bold">Mô tả:</label>
+        <textarea asp-for="MoTa" class="form-control" rows="4"></textarea>
+    </div>
+    <div class="mb-3">
+        <label asp-for="HangSanXuat" class="form-label fw-bold">Hãng sản xuất:</label>
+        <input asp-for="HangSanXuat" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="GiaNiemYet" class="form-label fw-bold">Giá niêm yết:</label>
+        <input asp-for="GiaNiemYet" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label asp-for="MaLoaiThuoc" class="form-label fw-bold">Loại thuốc:</label>
+        <select asp-for="MaLoaiThuoc" asp-items="ViewBag.DSLoaiThuoc" class="form-control">
+            <option value="">Chọn loại thuốc</option>
+        </select>
+    </div>
+    <td>
+            <button type="submit" class="btn btn-primary">Lưu</button>
+    </td>
+    <td>
+        <a asp-action="ListThuoc" class="btn btn-secondary">Quay lại danh sách</a>
+    </td>
+</form>
+

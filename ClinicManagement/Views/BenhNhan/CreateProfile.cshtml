@@ -1,0 +1,47 @@
+﻿@model ClinicManagement.Models.BenhNhan
+@{
+    ViewData["Title"] = "CreateProfile";
+    Layout = "~/Views/Shared/_LayoutNormal.cshtml";
+}
+
+<h2 class="text-primary text-center">THÔNG TIN CÁ NHÂN</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="CreateProfile" method="post">
+                <div class="mb-3 mt-3">
+                    <label asp-for="Ho" class="form-label fw-bold">Họ:</label>
+                    <input asp-for="Ho" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Ten" class="form-label fw-bold">Tên:</label>
+                    <input asp-for="Ten" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="NgaySinh" class="form-label fw-bold">Ngày sinh:</label>
+                    <input asp-for="NgaySinh" type="date" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="SoCccd" class="form-label fw-bold">Số căn cước công dân:</label>
+                    <input asp-for="SoCccd" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="GioiTinh" class="form-label fw-bold">Giới tính:</label>
+                    <input asp-for="GioiTinh" class="form-control" required />
+                    <span asp-validation-for="GioiTinh" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="DiaChi" class="form-label fw-bold">Địa chỉ:</label>
+                    <input asp-for="DiaChi" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="SoDienThoai" class="form-label fw-bold">Số điện thoại:</label>
+                    <input asp-for="SoDienThoai" class="form-control" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Lưu</button>
+            </form>
+        </div>
+    </div>
+</div>
+

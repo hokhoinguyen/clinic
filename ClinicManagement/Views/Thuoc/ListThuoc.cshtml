@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "ListThuoc";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<body>
+    <div class="container mt-3">
+        <h2 class="text-primary text-center">DANH SÁCH THUỐC</h2>
+        <form asp-controller="Thuoc" asp-action="ListThuoc" method="get" class="d-flex">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control me-2" name="searchTerm" placeholder="Nhập tên thuốc">
+                <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+            </div>
+        </form>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Tên thuốc</th>
+                    <th>Mô tả</th>
+                    <th>Hãng sản xuất</th>
+                    <th>Giá niêm yết</th>
+                    <th>
+                        <a type="button" class="btn btn-primary float-end" asp-controller="Thuoc" asp-action="CreateThuoc">Thêm</a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Thuoc in Model)
+                {
+                    <tr>
+                        <td>@Thuoc.MaThuoc</td>
+                        <td>@Thuoc.TenThuoc</td>
+                        <td>@Thuoc.MoTa</td>
+                        <td>@Thuoc.HangSanXuat</td>
+                        <td>@Thuoc.GiaNiemYet</td>
+                        <td>
+                            <a asp-controller="Thuoc" asp-action="EditThuoc" asp-route-id="@Thuoc.MaThuoc" class="btn btn-warning">Sửa</a>
+                        </td>
+                        <td>
+                            <a asp-controller="Thuoc" asp-action="DeleteThuoc" asp-route-id="@Thuoc.MaThuoc" class="btn btn-danger">Xóa</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+

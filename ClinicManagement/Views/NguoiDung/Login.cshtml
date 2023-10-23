@@ -1,0 +1,36 @@
+﻿@model ClinicManagement.Models.NguoiDung
+@{
+    ViewData["Title"] = "Đăng nhập";
+    Layout = "~/Views/Shared/_LayoutNormal1.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="text-primary text-center mb-4">ĐĂNG NHẬP</h2>
+                    <form asp-action="Login" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="TenDangNhap" class="form-label fw-bold">Tên đăng nhập:</label>
+                            <input asp-for="TenDangNhap" class="form-control" placeholder="Nhập tên đăng nhập" required>
+                            <span asp-validation-for="TenDangNhap" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="MatKhau" class="form-label fw-bold">Mật khẩu:</label>
+                            <input asp-for="MatKhau" type="password" class="form-control" placeholder="Nhập mật khẩu" required>
+                            <span asp-validation-for="MatKhau" class="text-danger"></span>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

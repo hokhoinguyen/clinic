@@ -1,0 +1,68 @@
+﻿@{
+    <head>
+        <title>@ViewBag.Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand">
+                    <img src="https://res.cloudinary.com/dlxhvabif/image/upload/v1695273562/avatar/logoclinic_zoehix.png" class="rounded" alt="LogoClinic" width="80" height="80">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Thống kê</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Lịch trực</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="BacSi" asp-action="ListBacSi">Danh mục bác sĩ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="YTa" asp-action="ListYTa">Danh mục y tá</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Thuoc" asp-action="ListThuoc">Danh mục thuốc</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="NguoiDung" asp-action="ConfirmLogout">Đăng xuất</a>
+                        </li>
+                    </ul>
+                    @*<div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="https://res.cloudinary.com/dlxhvabif/image/upload/v1695277580/avatar/male2_qrqjao.jpg" alt="Logo" style="width:40px;" class="rounded-pill">
+                        </a>
+                    </div>
+                    @*<form class="d-flex">
+                        <input class="form-control me-2" type="text" placeholder="Search">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </form>*@
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid mt-3">
+            @RenderBody()
+        </div>
+
+        <footer class="mt-4 p-5 bg-dark text-white rounded">
+            <p>&copy; @DateTime.Now.Year Hồ Ngọc Khôi Nguyên. All rights reserved.</p>
+            <ul>
+                <li><a href="#" class="text-white">Privacy Policy</a></li>
+                <li><a href="#" class="text-white">Terms of Service</a></li>
+                <li><a href="#" class="text-white">Contact Us</a></li>
+            </ul>
+        </footer>
+    </body>
+}

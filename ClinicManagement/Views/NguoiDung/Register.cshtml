@@ -1,0 +1,64 @@
+﻿@model ClinicManagement.Models.NguoiDung
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_LayoutNormal1.cshtml";
+}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#XacNhanMatKhau').on('keyup', function() {
+            var matKhau = $('#MatKhau').val();
+            var xacNhanMatKhau = $(this).val();
+
+            if (matKhau === xacNhanMatKhau) {
+                $('#xac-nhan-mat-khau-message').text('Mật khẩu trùng khớp.').removeClass('text-danger').addClass('text-success');
+            } else {
+                $('#xac-nhan-mat-khau-message').text('Xác nhận mật khẩu không trùng khớp.').removeClass('text-success').addClass('text-danger');
+            }
+        });
+    });
+</script>
+
+<h2 class="text-primary text-center">ĐĂNG KÝ</h2>
+
+<form asp-action="Register" method="post" enctype="multipart/form-data">
+    <div class="mb-3 mt-3">
+        <label for="Ho" class="form-label fw-bold">Họ:</label>
+        <input type="text" class="form-control" id="Ho" name="Ho" placeholder="Nhập họ" required>
+    </div>
+    <div class="mb-3">
+        <label for="Ten" class="form-label fw-bold">Tên:</label>
+        <input type="text" class="form-control" id="Ten" name="Ten" placeholder="Nhập tên" required>
+    </div>
+    <div class="mb-3">
+        <label for="TenDangNhap" class="form-label fw-bold">Tên đăng nhập:</label>
+        <input type="text" class="form-control" id="TenDangNhap" name="TenDangNhap" placeholder="Nhập tên đăng nhập" required>
+        @if (ViewData["ErrorMessage"] != null)
+        {
+            <span class="text-danger">@ViewData["ErrorMessage"]</span>
+        }
+    </div>
+    <div class="mb-3">
+        <label for="MatKhau" class="form-label fw-bold">Mật khẩu:</label>
+        <input type="password" class="form-control" id="MatKhau" name="MatKhau" placeholder="Nhập mật khẩu" required>
+    </div>
+    <div class="mb-3">
+        <label for="XacNhanMatKhau" class="form-label fw-bold">Xác nhận mật khẩu:</label>
+        <input type="password" class="form-control" id="XacNhanMatKhau" name="XacNhanMatKhau" placeholder="Nhập lại mật khẩu" required>
+        <span id="xac-nhan-mat-khau-message" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Email" class="form-label fw-bold">Email:</label>
+        <input type="email" class="form-control" id="Email" name="Email" placeholder="Nhập email" required>
+    </div>
+    <div class="mb-3">
+        <label for="Avatar" class="form-label fw-bold">Chọn ảnh đại diện:</label>
+        <input type="file" class="form-control" id="Avatar" name="Avatar" accept=".jpg, .jpeg, .png">
+    </div>
+    <td>
+        <button type="submit" class="btn btn-primary">Đăng Ký</button>
+    </td>
+</form>

@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "CreateThuoc";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 class="text-primary text-center">THÊM MỚI THUỐC</h2>
+
+<form asp-action="CreateThuoc" method="post">
+    <div class="mb-3 mt-3">
+        <label for="TenThuoc" class="form-label fw-bold">Tên thuốc:</label>
+        <input type="text" class="form-control" id="TenThuoc" name="TenThuoc" placeholder="Nhập tên thuốc" required>
+    </div>
+    <div class="mb-3">
+        <label for="MoTa" class="form-label fw-bold">Mô tả:</label>
+        <textarea class="form-control" id="MoTa" name="MoTa" rows="4" placeholder="Nhập mô tả"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="HangSanXuat" class="form-label fw-bold">Hãng sản xuất:</label>
+        <input type="text" class="form-control" id="HangSanXuat" name="HangSanXuat" placeholder="Nhập hãng sản xuất">
+    </div>
+    <div class="mb-3">
+        <label for="GiaNiemYet" class="form-label fw-bold">Giá niêm yết:</label>
+        <input type="number" class="form-control" id="GiaNiemYet" name="GiaNiemYet" placeholder="Nhập giá niêm yết" required>
+    </div>
+    <div class="mb-3">
+        <label for="MaLoaiThuoc" class="form-label fw-bold">Loại thuốc:</label>
+        <select class="form-control" id="MaLoaiThuoc" name="MaLoaiThuoc">
+            <option value="">Chọn loại thuốc</option>
+            @foreach (var item in ViewBag.DSLoaiThuoc)
+            {
+                <option value="@item.Value">@item.Text</option>
+            }
+        </select>
+    </div>
+    <td>
+        <button type="submit" class="btn btn-primary">Lưu</button>
+    </td>
+    <td>
+        <a asp-action="ListThuoc" class="btn btn-secondary">Quay lại danh sách</a>
+    </td>
+    
+</form>

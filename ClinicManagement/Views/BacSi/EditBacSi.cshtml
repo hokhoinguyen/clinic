@@ -1,0 +1,61 @@
+﻿@model ClinicManagement.Models.BacSi
+@{
+    ViewData["Title"] = "EditBacSi";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 class="text-primary text-center">CHỈNH SỬA THÔNG TIN BÁC SĨ</h2>
+
+<form asp-action="EditBacSi" method="post">
+    <input type="hidden" asp-for="MaBacSi" />
+
+    <div class="mb-3 mt-3">
+        <label asp-for="Ho" class="form-label fw-bold">Họ:</label>
+        <input asp-for="Ho" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Ten" class="form-label fw-bold">Tên:</label>
+        <input asp-for="Ten" class="form-control" rows="4"></input>
+    </div>
+    <div class="mb-3">
+        <label asp-for="NgaySinh" class="form-label fw-bold">Ngày sinh:</label>
+        <input asp-for="NgaySinh" type="date" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="ChucVu" class="form-label fw-bold">Chức vụ:</label>
+        <input asp-for="ChucVu" class="form-control" required />
+    </div>
+    <div class="mb-3">
+    <label asp-for="GioiTinh" class="form-label fw-bold">Giới tính:</label>
+    <input asp-for="GioiTinh" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label asp-for="DiaChi" class="form-label fw-bold">Địa chỉ:</label>
+        <input asp-for="DiaChi" class="form-control" rows="4"></input>
+    </div>
+    <div class="mb-3">
+        <label asp-for="SoDienThoai" class="form-label fw-bold">Số điện thoại:</label>
+        <input asp-for="SoDienThoai" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="BangCap" class="form-label fw-bold">Bằng cấp:</label>
+        <input asp-for="BangCap" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label asp-for="ChuyenMon" class="form-label fw-bold">Chuyên môn:</label>
+        <input asp-for="ChuyenMon" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label asp-for="MaNd" class="form-label fw-bold">Người dùng:</label>
+        <select asp-for="MaNd" asp-items="ViewBag.DSNguoiDung" class="form-control">
+            <option value="">Chọn người dùng</option>
+        </select>
+    </div>
+    <td>
+        <button type="submit" class="btn btn-primary">Lưu</button>
+    </td>
+    <td>
+        <a asp-action="ListBacSi" class="btn btn-secondary">Quay lại danh sách</a>
+    </td>
+</form>
+

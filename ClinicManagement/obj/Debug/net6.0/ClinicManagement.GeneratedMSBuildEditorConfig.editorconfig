@@ -1,0 +1,173 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ClinicManagement
+build_property.RootNamespace = ClinicManagement
+build_property.ProjectDir = D:\DoAnNganh\ClinicManagement\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = D:\DoAnNganh\ClinicManagement
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/DoAnNganh/ClinicManagement/Views/Admin/AdminView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5WaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/BacSi/BacSiView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFjU2lcQmFjU2lWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/BacSi/CreateBacSi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFjU2lcQ3JlYXRlQmFjU2kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/BacSi/DeleteBacSi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFjU2lcRGVsZXRlQmFjU2kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/BacSi/EditBacSi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFjU2lcRWRpdEJhY1NpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/BacSi/ListBacSi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFjU2lcTGlzdEJhY1NpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/BacSi/TaoDonThuoc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFjU2lcVGFvRG9uVGh1b2MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/BenhNhan/CreateProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVuaE5oYW5cQ3JlYXRlUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/BenhNhan/LichHenXacNhan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVuaE5oYW5cTGljaEhlblhhY05oYW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/BenhNhan/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVuaE5oYW5cUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/BenhNhan/Successful.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVuaE5oYW5cU3VjY2Vzc2Z1bC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/BenhNhan/ThongTinLichHen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVuaE5oYW5cVGhvbmdUaW5MaWNoSGVuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/BenhNhan/XemLichHen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVuaE5oYW5cWGVtTGljaEhlbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/NguoiDung/BenhNhanView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmd1b2lEdW5nXEJlbmhOaGFuVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/NguoiDung/ConfirmLogout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmd1b2lEdW5nXENvbmZpcm1Mb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/NguoiDung/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmd1b2lEdW5nXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/NguoiDung/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmd1b2lEdW5nXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/Shared/_LayoutBacSi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRCYWNTaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/Shared/_LayoutBenhNhan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRCZW5oTmhhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/Shared/_LayoutNormal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXROb3JtYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/Shared/_LayoutNormal1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXROb3JtYWwxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/Shared/_LayoutYTa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRZVGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/Thuoc/CreateThuoc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGh1b2NcQ3JlYXRlVGh1b2MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/Thuoc/DeleteThuoc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGh1b2NcRGVsZXRlVGh1b2MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/Thuoc/EditThuoc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGh1b2NcRWRpdFRodW9jLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/Thuoc/ListThuoc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGh1b2NcTGlzdFRodW9jLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/YTa/CreateYTa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWVRhXENyZWF0ZVlUYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/YTa/DeleteYTa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWVRhXERlbGV0ZVlUYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/YTa/EditYTa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWVRhXEVkaXRZVGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/YTa/LichHenChoXacNhan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWVRhXExpY2hIZW5DaG9YYWNOaGFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/YTa/ListYTa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWVRhXExpc3RZVGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/YTa/YTaView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWVRhXFlUYVZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnNganh/ClinicManagement/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

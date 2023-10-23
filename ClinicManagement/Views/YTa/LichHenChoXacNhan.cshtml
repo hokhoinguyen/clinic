@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "LichHenChoXacNhan";
+    Layout = "~/Views/Shared/_LayoutYTa.cshtml";
+}
+
+<body>
+    <div class="container mt-3">
+        <h2 class="text-primary text-center">XÁC NHẬN LỊCH HẸN</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Số thứ tự</th>
+                    <th>Ngày hẹn</th>
+                    <th>Trạng thái</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var LichHen in Model)
+                {
+                    <tr>
+                        <td>@LichHen.MaLichHen</td>
+                        <td>@LichHen.NgayGioHen.ToString("dd/MM/yyyy HH:mm:ss")</td>
+                        <td>@LichHen.TrangThai</td>
+                        <td>
+                            <a asp-action="XacNhanLichHen" asp-controller="YTa" asp-route-maLichHen="@LichHen.MaLichHen" class="btn btn-success">Xác nhận</a>
+                        </td>
+                        <td>
+                            <a asp-action="HuyLichHen" asp-controller="YTa" asp-route-maLichHen="@LichHen.MaLichHen" class="btn btn-danger">Hủy</a>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="text-center">
+            <a asp-action="YTaView" asp-controller="YTa" class="btn btn-primary">Trở về trang chủ</a>
+        </div>
+    </div>
+</body>
+

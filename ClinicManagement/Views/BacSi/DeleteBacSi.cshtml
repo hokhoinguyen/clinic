@@ -1,0 +1,30 @@
+﻿@model ClinicManagement.Models.BacSi
+@{
+    ViewData["Title"] = "DeleteBacSi";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 class="text-danger text-center">XÓA BÁC SĨ</h2>
+<div class="container mt-3">
+    <h4>Bạn có chắc chắn muốn xóa bác sĩ "@Model.Ho @Model.Ten" không?</h4>
+    <div>
+        <h5>Thông tin bác sĩ:</h5>
+        <ul>
+            <li><strong>Họ:</strong> @Model.Ho</li>
+            <li><strong>Tên:</strong> @Model.Ten</li>
+            <li><strong>Ngày sinh:</strong> @Model.NgaySinh</li>
+            <li><strong>Chức vụ:</strong> @Model.ChucVu</li>
+            <li><strong>Giới tính:</strong> @Model.GioiTinh</li>
+            <li><strong>Địa chỉ:</strong> @Model.DiaChi</li>
+            <li><strong>Số điện thoại:</strong> @Model.SoDienThoai</li>
+            <li><strong>Bằng cấp:</strong> @Model.BangCap</li>
+            <li><strong>Chuyên môn:</strong> @Model.ChuyenMon</li>
+        </ul>
+    </div>
+    <form asp-action="PostDeleteBacSi" asp-route-id="@Model.MaBacSi" method="post">
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-danger">Xóa</button>
+        <a asp-action="ListBacSi" class="btn btn-secondary">Hủy bỏ</a>
+    </form>
+</div>
+

@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewData["Title"] = "CreateBacSi";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 class="text-primary text-center">THÊM BÁC SĨ</h2>
+
+<form asp-action="CreateBacSi" method="post">
+    <div class="mb-3 mt-3">
+        <label for="Ho" class="form-label fw-bold">Họ:</label>
+        <input type="text" class="form-control" id="Ho" name="Ho" placeholder="Nhập họ" required>
+    </div>
+    <div class="mb-3">
+        <label for="Ten" class="form-label fw-bold">Tên:</label>
+        <input class="form-control" id="Ten" name="Ten" rows="4" placeholder="Nhập tên"></input>
+    </div>
+    <div class="mb-3">
+        <label for="NgaySinh" class="form-label fw-bold">Ngày sinh:</label>
+        <input id="NgaySinh" name="NgaySinh" type="date" class="form-control" />
+    </div>
+    @*<div class="mb-3">
+        <label for="ChucVu" class="form-label fw-bold">Chức vụ:</label>
+        <input type="text" class="form-control" id="ChucVu" name="ChucVu" placeholder="Nhập chức vụ">
+    </div>*@
+    <div class="mb-3">
+        <label for="ChucVu" class="form-label fw-bold">Chức vụ:</label>
+        <select class="form-control" id="ChucVu" name="ChucVu">
+            <option value="">Chọn chức vụ</option>
+            @foreach (var item in ViewBag.DSChucVu)
+            {
+                <option value="@item.Text">@item.Text</option>
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="GioiTinh" class="form-label fw-bold">Giới tính:</label>
+        <input type="text" class="form-control" id="GioiTinh" name="GioiTinh" placeholder="Nhập giới tính" required>
+    </div>
+    <div class="mb-3">
+        <label for="DiaChi" class="form-label fw-bold">Địa chỉ:</label>
+        <input type="text" class="form-control" id="DiaChi" name="DiaChi" placeholder="Nhập địa chỉ">
+    </div>
+    <div class="mb-3">
+        <label for="SoDienThoai" class="form-label fw-bold">Số điện thoại:</label>
+        <input type="text" class="form-control" id="SoDienThoai" name="SoDienThoai" placeholder="Nhập số điện thoại" required>
+    </div>
+    <div class="mb-3">
+        <label for="BangCap" class="form-label fw-bold">Bằng cấp:</label>
+        <select class="form-control" id="BangCap" name="BangCap">
+            <option value="">Chọn bằng cấp</option>
+            @foreach (var item in ViewBag.DSBangCap)
+            {
+                <option value="@item.Text">@item.Text</option>
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="ChuyenMon" class="form-label fw-bold">Chuyên môn:</label>
+        <select class="form-control" id="ChuyenMon" name="ChuyenMon">
+            <option value="">Chọn chuyên môn</option>
+            @foreach (var item in ViewBag.DSChuyenMon)
+            {
+                <option value="@item.Text">@item.Text</option>
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="MaNd" class="form-label fw-bold">Mã người dùng:</label>
+        <input type="number" class="form-control" id="MaNd" name="MaNd" placeholder="Nhập mã người dùng" required>
+    </div>
+    @*<div class="mb-3">
+        <label for="MaNd" class="form-label fw-bold">Người dùng:</label>
+        <select class="form-control" id="MaNd" name="MaNd">
+            <option value="">Chọn người dùng</option>
+            @foreach (var item in ViewBag.DSNguoiDung)
+            {
+                <option value="@item.Value">@item.Value - @item.Text</option>
+            }
+        </select>
+    </div>*@
+    <td>
+        <button type="submit" class="btn btn-primary">Lưu</button>
+    </td>
+    <td>
+        <a asp-action="ListBacSi" class="btn btn-secondary">Quay lại danh sách</a>
+    </td>
+
+</form>
+
